@@ -45,7 +45,10 @@
 #' \item{coef.obj}{an object containing information about the estimated coefficients.} \item{link.fn.obj}{an object containing information about the estimated link functions.} \item{alpha.coef}{ the estimated single index coefficients.} \item{eta.coef}{the  estimated  main effect coefficients if \code{eff.aug=TRUE}.} \item{beta.t.coef}{the list of the estimated treatment-specific B-spline coefficient vectors.} \item{beta.0.coef}{the estimated B-spline coefficient vector for the main effect of the single index variable.} \item{smoother}{an object containing information about the estimated link functions, including the knot sequences used in the B-spline approximation \code{knots.t.}} \item{link.fn.plot}{a plot object for the link functions.} \item{coef.plot}{a plot object for the single index coefficients.} \item{boot.results}{a \code{boot} object that can be used to construct bootstrap  confidence intervals for the single index coefficients.}
 #'
 #' @author Park, Petkova, Tarpey, Ogden
-#' @import plyr splines boot glmnet ggplot2  SAM  mgcv
+#' @import boot glmnet ggplot2 SAM
+#' @importFrom splines splineDesign
+#` @importFrom plyr dlply
+#' @importFrom mgcv gam
 #' @importFrom MASS lm.ridge
 #' @importFrom magic adiag
 #' @seealso \code{pred.csim},  \code{fit.csim},  \code{fit.csim.cv}
